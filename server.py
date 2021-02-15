@@ -1,6 +1,6 @@
 from flask import Flask, request
 from response import send_message
-import os
+import os, re
 
 app = Flask(__name__)
 VERIFY_TOKEN = os.environ.get('FACEBOOK_VERIFY_TOKEN')
@@ -8,9 +8,14 @@ VERIFY_TOKEN = os.environ.get('FACEBOOK_VERIFY_TOKEN')
 
 def predined_response(message):
     """This is a predefined list of enquiries from the customer."""
-    if message == 'Hi':
+    if message == r'[Hh]i':
         return 'Hello, welcome to GD Test. How can I help you?' 
-
+    elif message == 'genuine':
+        return 'Yes all our products are genuine'
+    elif message == 'stock':
+        return 'Hold on please, let me check'
+    else:
+        return 'Thank you for your time'
 
 def verify_webhook(req):
     if req.args.get("hub.verify_token") == VERIFY_TOKEN:
