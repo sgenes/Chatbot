@@ -1,0 +1,3 @@
+import spacy
+
+spacy.lower()
