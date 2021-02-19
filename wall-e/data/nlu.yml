@@ -1,0 +1,117 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - Hi
+    - good morning
+    - Good morning
+    - Good evening
+    - good evening
+    - hey there
+    - hello there
+    - hi bro
+    - hey bro
+    - hi dude
+    - hey dude
+    - how are you
+- intent: enquiry_delivery
+  examples: |
+    - hi do you deliver to [Klang](destination?)
+    - hi do you deliver to [Sunway](destination?)
+    - hi do you deliver to [PJ](destination?)
+    - hi do you deliver to [Bangsar](destination?)
+    - hi do you deliver to [Sri Hartamas](destination?)
+    - hi do you deliver to [Mont Kiara](destination?)
+    - hi do you deliver to [Kota Damansara](destination?)
+    - hi do you deliver to [Batu Caves](destination?)
+    - hi do you deliver to [Shah Alam](destination?)
+    - hi do you deliver to [SegambutSri Kembangan](destination?)
+    - hi do you deliver to [Sri Kembangan](destination?)
+    - hi do you deliver to [Setia Alam](destination?)
+    - hi do you deliver to [Subang](destination?)
+    - hi do you deliver to [Taman Desa](destination?)
+    - hi do you deliver to [Bukit Jalil](destination?)
+    - hello, where are your coverage areas?
+    - where do you deliver to?
+    - can you deliver to [place](destination)?
+    - where do you deliver to
+    - do you deliver to [bangsar](destination?)
+    - do you deliver?
+    - do you deliver to [bangsar](destination?)
+- intent: enquiry_delivery_fees
+  examples: |
+    - How much is delivery from [place](source) to [place](destination)?
+    - how much is delivery
+    - how much is delivery fees
+    - how much is delivery fee
+- intent: enquiry_stock
+  examples: |
+    - hi do you have [whiskey](product)?
+    - hi do you have [gin](product)?
+    - hi do you have [vodka](product)?
+    - hi do you have [brandy](product)?
+    - hi do you still have stock for [gin](product)
+    - Do you have [tonic](product)?
+    - do you have [whiskey](product)
+- intent: enquiry_genuine
+  examples: |
+    - Are your products genuine?
+    - Is it genuine?
+- intent: enquiry_duties
+  examples: |
+    - Are duties paid?
+    - do you pay import duties?
+    - do you pay duties?
+- intent: enquiry_payment
+  examples: |
+    - How do I pay?
+    - Where do I pay?
+    - Do you do COD?
+    - Cash on Delivery?
+    - Bank transfer?
+- intent: order
+  examples: |
+    - Can I have [product]?
+    - Can I order?
+    - I want to order [product]
+    - I want to place order
+    - Can I order now?
+- intent: order_enquiry
+  examples: |
+    - Can I have tracking details?
+    - When can I expect delivery?
+    - Delivery ETA
+    - Delivery estimate
+    - When can I expect the order?
+- intent: payment_account
+  examples: |
+    - can I transfer?
+    - Where do I transfer to?
+    - bank account number
+- intent: paid
+  examples: |
+    - okay, paid
+    - please check
+    - okay have sent you proof of payment
+- intent: thanks
+  examples: |
+    - Thanks
+    - Thank you so much
+- intent: suggest
+  examples: |
+    - Improve response time
+    - You can improve actually
+- intent: bye
+  examples: |
+    - No, I am good as of now. Bye
+    - Bye
+    - Goodbye
+    - have a nice day
+    - see you around
+    - thanks
+- intent: enquiry_shipment_source
+  examples: |
+    - where do you ship from

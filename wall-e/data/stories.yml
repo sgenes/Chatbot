@@ -1,0 +1,71 @@
+version: "2.0"
+stories:
+  - story: greet and respond
+    steps:
+    - intent: greet
+    - action: utter_respond_to_greetings
+    - intent: enquiry_delivery
+      entities:
+        - destination: bangsar
+        - destination: Sri Hartamas
+        - destination: Bukit Damansara
+        - destination: Taman Desa
+        - destination: Old Klang Road
+        - destination: Taman Tun
+        - destination: TTDI
+        - destination: Kota Damansara
+        - destination: PJ
+        - destination: SS2
+        - destination: Kuchai Lama
+        - destination: Shah Alam
+        - destination: Subang
+        - destination: USJ
+        - destination: Seapark
+        - destination: Seputeh
+        - destination: Sri Kembangan
+        - destination: Bukit Jalil
+        - destination: Puchong
+    - action: utter_respond_to_enquiry_delivery
+    - intent: enquiry_delivery_fees
+    - action: utter_respond_to_enquiry_delivery_fees
+    - intent: enquiry_stock
+    - action: utter_respond_to_enquiry_stock
+    - intent: enquiry_genuine
+    - action: utter_respond_to_enquiry_genuine
+    - intent: enquiry_duties
+    - action: utter_respond_to_enquiry_duties
+    - intent: enquiry_payment
+    - action: utter_respond_to_enquiry_payment
+    - intent: order
+    - action: utter_respond_to_order
+    - action: utter_payment_account
+    - intent: order_enquiry
+    - action: utter_respond_to_order_enquiry
+    - intent: paid
+    - action: utter_receipt_of_payment
+    - action: utter_thanks_for_your_order
+    - intent: thanks
+    - action: utter_thanks_for_your_order
+    - intent: bye
+    - action: utter_respond_to_bye
+    - intent: thanks
+    - action: utter_order_prompt
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_respond_to_greetings
+  - intent: enquiry_stock
+    entities:
+    - product: whiskey
+  - action: utter_respond_to_enquiry_stock
+  - intent: enquiry_delivery
+  - action: utter_respond_to_enquiry_delivery
+  - intent: enquiry_delivery_fees
+  - action: utter_respond_to_enquiry_delivery_fees
+  - intent: enquiry_delivery
+    entities:
+    - destination?: bangsar
+  - action: utter_respond_to_enquiry_delivery
+  - intent: enquiry_delivery_fees
+  - action: utter_respond_to_deliver_fee

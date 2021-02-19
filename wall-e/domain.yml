@@ -1,0 +1,83 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+entities:
+- source
+- destination
+
+intents:
+- greet
+- enquiry_delivery
+- enquiry_delivery_fees
+- enquiry_stock
+- enquiry_genuine
+- enquiry_duties
+- enquiry_payment
+- order
+- order_enquiry
+- payment_account
+- paid
+- thanks
+- suggest
+- bye
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hi, how can I help?"
+
+  utter_respond_to_greetings:
+  - text: "Hi, How can I help you?"
+
+  utter_respond_to_enquiry_delivery:
+  - text: "Delivery within Klang Valley only as of now and delivery fees are borne by customers. Is there an item you'd like to order?"
+
+  utter_respond_to_enquiry_delivery_fees:
+  - text: "Hold on please, let me check on the charges for you. Do note that delivery fees are borne by customers." 
+
+  utter_respond_to_enquiry_stock:
+  - text: "Let me check on availability. One moment please!"
+  - text: "Hold on please, let me check for you"
+  - text: "Sure, we have it in stock"
+  - text: "Sorry, we are out of [product]"
+
+  utter_respond_to_enquiry_genuine:
+  - text: "Yes all our alcohol are genuine"
+
+  utter_respond_to_enquiry_duties:
+  - text: "Yes most of our products are duty paid"
+
+  utter_respond_to_enquiry_payment:
+  - text: "We accept Cash on Delivery and also Bank Transfers"
+
+  utter_order_prompt:
+  - text: "Would you like to place an order?"
+
+  utter_respond_to_order:
+  - text: "Sure, let me place the order for you."
+  - text: "Of course, let me go ahead and place the order for you"
+
+  utter_receipt_of_payment:
+  - text: "Thanks, we have received your payment and will arrange for delivery now"
+  - text: "Here is the link to track your order"
+
+  utter_respond_to_order_enquiry:
+  - text: "Sure, let me send you the details"
+  - text: "Here is the link to track your order"
+ 
+  utter_thanks_for_your_order:
+  - text: "Thank you for your order"
+
+  utter_payment_account:
+  - text: "Please transfer to MAYBANK 123-456-789 GD SDN BHD"
+  - text: "PLease make a transfer to MAYBANK 123-456-789 GD SDN BHD"
+
+  utter_respond_to_bye:
+  - text: "Have a good day"
+
+  utter_respond_to_enquiry_shipment_source:
+  - text: "We ship from Bukit Jalil/Mont Kiara"
+
+
